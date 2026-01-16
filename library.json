@@ -1,0 +1,20 @@
+{
+    "name": "PCF8574-I2C",
+    "version": "1.0.0",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/hasenradball/PCF8574-I2C"
+    },
+    "description": "Arduino library for PCF8574, a 8-port GPIO expander",
+    "keywords": ["PCF8574", "I2C", "port-expander"],
+    "authors":
+    {
+        "name": "Frank Häfele",
+        "mail": "mail@frankhaefele.de",
+        "url": "http://esp8266-01-adapter.de",
+        "maintainer": true
+    },
+    "frameworks": ["Arduino"],
+    "platforms": ["atmelavr", "espressif8266", "espressif32", "atmelsam"]
+}

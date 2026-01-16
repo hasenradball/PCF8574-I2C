@@ -1,0 +1,44 @@
+##################################
+# Syntax Coloring Map For PCF8574-I2C
+##################################
+
+##################################
+# Datatypes (KEYWORD1)
+##################################
+
+PCF8574                   KEYWORD1
+
+##################################
+# Methods and Functions (KEYWORD2)
+##################################
+
+begin                     KEYWORD2
+resetPort                 KEYWORD2
+readPin                   KEYWORD2
+
+setPin                    KEYWORD2
+setPort                   KEYWORD2
+
+toggle                    KEYWORD2
+
+rotateLeft                KEYWORD2
+rotateRight               KEYWORD2
+
+isDevicePresent           KEYWORD2
+readPort                  KEYWORD2
+writePort                 KEYWORD2
+
+
+##################################
+# Instances (KEYWORD2)
+##################################
+
+##################################
+# Constants (LITERAL1)
+##################################
+
+PCF8574_LIB_VERSION         LITERAL1
+PCF8574_STATE_OK            LITERAL1
+PCF8574_ERROR_PIN           LITERAL1
+PCF8574_ERROR_I2C           LITERAL1
+PCF8574_ERROR_VALUE         LITERAL1

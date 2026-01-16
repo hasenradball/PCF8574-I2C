@@ -11,12 +11,6 @@
 *.gch
 *.pch
 
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
 # Compiled Dynamic libraries
 *.so
 *.dylib
@@ -37,5 +31,10 @@
 *.out
 *.app
 
-# debug information files
-*.dwo
+# Mac related files
+.DS_Store
+
+# doxy files
+docs/html/*
+docs/latex/*
+!docs/latex/refman.pdf
