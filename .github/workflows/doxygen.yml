@@ -14,11 +14,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Installiere Doxygen + graphviz
-      - name: Install Doxygen
+      # Installiere Doxygen + graphviz + LaTeX
+      - name: Install Doxygen and LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y doxygen graphviz
+          sudo apt-get install -y doxygen graphviz texlive texlive-latex-extra texlive-fonts-recommended
 
       # Generiere die Dokumentation
       - name: Generate Documentation
@@ -30,6 +30,24 @@ jobs:
           ls -la docs
           mkdir docs/html/docs
           cp docs/*.jpg docs/*.png docs/html/docs
+
+      # Erstelle PDF aus LaTeX
+      - name: Build PDF from LaTeX
+        run: |
+          cd docs/latex
+          make pdf || echo "PDF generation encountered warnings, but continuing..."
+          cd ../..
+
+      # Kopiere PDF zur GitHub Pages
+      - name: Copy PDF to GitHub Pages
+        run: |
+          if [ -f "docs/latex/refman.pdf" ]; then
+            cp docs/latex/refman.pdf docs/html/PCF8574-I2C-Documentation.pdf
+            echo "PDF copied successfully to GitHub Pages"
+          else
+            echo "Warning: PDF not found at docs/latex/refman.pdf"
+            find docs -name "*.pdf" -type f 2>/dev/null || echo "No PDF files found"
+          fi
 
       # Disable Jekyll
       - name: Disable Jekyll
