@@ -1,7 +1,7 @@
 # PCF8574-I2C Library
-workflow spellcheck
-workflow Compile Examples
-workflow Generate Doxygen Documentation
+[![Spell Check](https://github.com/hasenradball/PCF8574-I2C/actions/workflows/spell_checker.yml/badge.svg)](https://github.com/hasenradball/PCF8574-I2C/actions/workflows/spell_checker.yml)
+[![Compile Examples](https://github.com/hasenradball/PCF8574-I2C/actions/workflows/compile_examples.yml/badge.svg)](https://github.com/hasenradball/PCF8574-I2C/actions/workflows/compile_examples.yml)
+[![Generate Doxygen Documentation](https://github.com/hasenradball/PCF8574-I2C/actions/workflows/doxygen.yml/badge.svg)](https://github.com/hasenradball/PCF8574-I2C/actions/workflows/doxygen.yml)
 
 Arduino Library for PCF8574, a 8-port GPIO exander via i2c
 
