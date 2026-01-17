@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include "PCF8574-I2C.hpp"
+#include "PCF8574-I2C.h"
 
 PCF8574_I2C::PCF8574 pcf{0x20, &Wire};
 void setup() {

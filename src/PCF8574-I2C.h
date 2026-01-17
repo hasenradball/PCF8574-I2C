@@ -1,5 +1,5 @@
 /**
- * @file PCF8574-I2C.hpp
+ * @file PCF8574-I2C.h
  * @author Frank Häfele (mail@frankhaefele.de)
  * @brief Library for a PCF8574 GPIO expander
  * @version 1.0.0
@@ -11,7 +11,7 @@
 
 #pragma once 
 
-#define __PCF8574_I2C_HPP__
+#define __PCF8574_I2C_H__
 
 #include "Wire.h"
 
