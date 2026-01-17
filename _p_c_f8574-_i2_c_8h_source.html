@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PCF8574-I2C: src/PCF8574-I2C.hpp Source File</title>
+<title>PCF8574-I2C: src/PCF8574-I2C.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,13 +80,13 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">PCF8574-I2C.hpp</div></div>
+  <div class="headertitle"><div class="title">PCF8574-I2C.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_p_c_f8574-_i2_c_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="_p_c_f8574-_i2_c_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once </span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define __PCF8574_I2C_HPP__</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define __PCF8574_I2C_H__</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;Wire.h&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
@@ -94,13 +94,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *PCF8574_LIB_VERSION   {<span class="stringliteral">&quot;1.0.0&quot;</span>};</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8hpp.html#af253eae47b1c9cba2d4835392803d75d">   26</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8hpp.html#af253eae47b1c9cba2d4835392803d75d">PCF8574_STATE_OK</a>           {0x00};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8h.html#af253eae47b1c9cba2d4835392803d75d">   26</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8h.html#af253eae47b1c9cba2d4835392803d75d">PCF8574_STATE_OK</a>           {0x00};</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8hpp.html#a2e4eb85ad0788f0a7f8cf747f039d540">   32</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8hpp.html#a2e4eb85ad0788f0a7f8cf747f039d540">PCF8574_ERROR_PIN</a>          {-1};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8h.html#a2e4eb85ad0788f0a7f8cf747f039d540">   32</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8h.html#a2e4eb85ad0788f0a7f8cf747f039d540">PCF8574_ERROR_PIN</a>          {-1};</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8hpp.html#a2c571f28c7a131482eccd7243cd569d8">   38</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8hpp.html#a2c571f28c7a131482eccd7243cd569d8">PCF8574_ERROR_I2C</a>          {-2};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8h.html#a2c571f28c7a131482eccd7243cd569d8">   38</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8h.html#a2c571f28c7a131482eccd7243cd569d8">PCF8574_ERROR_I2C</a>          {-2};</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8hpp.html#ac5bd3679e1836770a52ebb47bc595d2b">   44</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8hpp.html#ac5bd3679e1836770a52ebb47bc595d2b">PCF8574_ERROR_VALUE</a>        {-3};</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_p_c_f8574-_i2_c_8h.html#ac5bd3679e1836770a52ebb47bc595d2b">   44</a></span>   <span class="keyword">constexpr</span> int8_t <a class="code hl_variable" href="_p_c_f8574-_i2_c_8h.html#ac5bd3679e1836770a52ebb47bc595d2b">PCF8574_ERROR_VALUE</a>        {-3};</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
@@ -155,11 +155,11 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> }</div>
-<div class="ttc" id="a_p_c_f8574-_i2_c_8hpp_html_a2c571f28c7a131482eccd7243cd569d8"><div class="ttname"><a href="_p_c_f8574-_i2_c_8hpp.html#a2c571f28c7a131482eccd7243cd569d8">PCF8574_I2C::PCF8574_ERROR_I2C</a></div><div class="ttdeci">constexpr int8_t PCF8574_ERROR_I2C</div><div class="ttdoc">constant which states an error during I2C communication</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.hpp:38</div></div>
-<div class="ttc" id="a_p_c_f8574-_i2_c_8hpp_html_a2e4eb85ad0788f0a7f8cf747f039d540"><div class="ttname"><a href="_p_c_f8574-_i2_c_8hpp.html#a2e4eb85ad0788f0a7f8cf747f039d540">PCF8574_I2C::PCF8574_ERROR_PIN</a></div><div class="ttdeci">constexpr int8_t PCF8574_ERROR_PIN</div><div class="ttdoc">constant which states a wrong pin number was used</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.hpp:32</div></div>
-<div class="ttc" id="a_p_c_f8574-_i2_c_8hpp_html_ac5bd3679e1836770a52ebb47bc595d2b"><div class="ttname"><a href="_p_c_f8574-_i2_c_8hpp.html#ac5bd3679e1836770a52ebb47bc595d2b">PCF8574_I2C::PCF8574_ERROR_VALUE</a></div><div class="ttdeci">constexpr int8_t PCF8574_ERROR_VALUE</div><div class="ttdoc">constant which states that there was an error regarding a parameter value</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.hpp:44</div></div>
-<div class="ttc" id="a_p_c_f8574-_i2_c_8hpp_html_af253eae47b1c9cba2d4835392803d75d"><div class="ttname"><a href="_p_c_f8574-_i2_c_8hpp.html#af253eae47b1c9cba2d4835392803d75d">PCF8574_I2C::PCF8574_STATE_OK</a></div><div class="ttdeci">constexpr int8_t PCF8574_STATE_OK</div><div class="ttdoc">constant which states all ok, no error</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.hpp:26</div></div>
-<div class="ttc" id="aclass_p_c_f8574___i2_c_1_1_p_c_f8574_html"><div class="ttname"><a href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html">PCF8574_I2C::PCF8574</a></div><div class="ttdef"><b>Definition</b> PCF8574-I2C.hpp:47</div></div>
+<div class="ttc" id="a_p_c_f8574-_i2_c_8h_html_a2c571f28c7a131482eccd7243cd569d8"><div class="ttname"><a href="_p_c_f8574-_i2_c_8h.html#a2c571f28c7a131482eccd7243cd569d8">PCF8574_I2C::PCF8574_ERROR_I2C</a></div><div class="ttdeci">constexpr int8_t PCF8574_ERROR_I2C</div><div class="ttdoc">constant which states an error during I2C communication</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.h:38</div></div>
+<div class="ttc" id="a_p_c_f8574-_i2_c_8h_html_a2e4eb85ad0788f0a7f8cf747f039d540"><div class="ttname"><a href="_p_c_f8574-_i2_c_8h.html#a2e4eb85ad0788f0a7f8cf747f039d540">PCF8574_I2C::PCF8574_ERROR_PIN</a></div><div class="ttdeci">constexpr int8_t PCF8574_ERROR_PIN</div><div class="ttdoc">constant which states a wrong pin number was used</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.h:32</div></div>
+<div class="ttc" id="a_p_c_f8574-_i2_c_8h_html_ac5bd3679e1836770a52ebb47bc595d2b"><div class="ttname"><a href="_p_c_f8574-_i2_c_8h.html#ac5bd3679e1836770a52ebb47bc595d2b">PCF8574_I2C::PCF8574_ERROR_VALUE</a></div><div class="ttdeci">constexpr int8_t PCF8574_ERROR_VALUE</div><div class="ttdoc">constant which states that there was an error regarding a parameter value</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.h:44</div></div>
+<div class="ttc" id="a_p_c_f8574-_i2_c_8h_html_af253eae47b1c9cba2d4835392803d75d"><div class="ttname"><a href="_p_c_f8574-_i2_c_8h.html#af253eae47b1c9cba2d4835392803d75d">PCF8574_I2C::PCF8574_STATE_OK</a></div><div class="ttdeci">constexpr int8_t PCF8574_STATE_OK</div><div class="ttdoc">constant which states all ok, no error</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.h:26</div></div>
+<div class="ttc" id="aclass_p_c_f8574___i2_c_1_1_p_c_f8574_html"><div class="ttname"><a href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html">PCF8574_I2C::PCF8574</a></div><div class="ttdef"><b>Definition</b> PCF8574-I2C.h:47</div></div>
 <div class="ttc" id="aclass_p_c_f8574___i2_c_1_1_p_c_f8574_html_a4a1044e84c6f8e138fee165731921631"><div class="ttname"><a href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#a4a1044e84c6f8e138fee165731921631">PCF8574_I2C::PCF8574::rotateRight</a></div><div class="ttdeci">int8_t rotateRight()</div><div class="ttdoc">rotate port to the right</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.cpp:77</div></div>
 <div class="ttc" id="aclass_p_c_f8574___i2_c_1_1_p_c_f8574_html_aa69f54ac6ce9eca08cb28ab1169c6530"><div class="ttname"><a href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#aa69f54ac6ce9eca08cb28ab1169c6530">PCF8574_I2C::PCF8574::rotateLeft</a></div><div class="ttdeci">int8_t rotateLeft()</div><div class="ttdoc">rotate Port to the left</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.cpp:72</div></div>
 <div class="ttc" id="aclass_p_c_f8574___i2_c_1_1_p_c_f8574_html_aafcbac7751765f3af2b57b0d3b803285"><div class="ttname"><a href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#aafcbac7751765f3af2b57b0d3b803285">PCF8574_I2C::PCF8574::setPin</a></div><div class="ttdeci">int8_t setPin(uint8_t pin, uint8_t value)</div><div class="ttdoc">Set the a specific pin on the PCF8474 to 0 or 1.</div><div class="ttdef"><b>Definition</b> PCF8574-I2C.cpp:43</div></div>
@@ -171,7 +171,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 17 2026 09:02:39 for PCF8574-I2C by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sat Jan 17 2026 22:52:36 for PCF8574-I2C by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
