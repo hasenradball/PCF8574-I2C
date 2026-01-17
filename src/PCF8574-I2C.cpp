@@ -9,7 +9,7 @@
  * 
  */
 
- #include "PCF8574-I2C.hpp"
+ #include "PCF8574-I2C.h"
 
 using namespace PCF8574_I2C;
 
