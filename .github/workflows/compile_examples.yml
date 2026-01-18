@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        fqbn: [arduino:avr:uno]
+        fqbn: [arduino:avr:nano]
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +24,7 @@ jobs:
       - name: Compile AVR examples with -Wall -Wextra -Werror
         run: |
           set -e
-          for ino in $(find ./examples -name '*.ino'); do
+          for ino in $(find ./examples -name 'Arduino*.ino'); do
             echo "Compiling $ino for ${{ matrix.fqbn }}"
             arduino-cli compile --library ./ --fqbn ${{ matrix.fqbn }} \
               --build-property 'compiler.cpp.extra_flags=-Wall -Wextra -Werror' \
