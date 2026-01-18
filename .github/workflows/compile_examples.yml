@@ -26,7 +26,7 @@ jobs:
           set -e
           for ino in $(find ./examples -name '*.ino'); do
             echo "Compiling $ino for ${{ matrix.fqbn }}"
-            arduino-cli compile --fqbn ${{ matrix.fqbn }} \
+            arduino-cli compile --library ./ --fqbn ${{ matrix.fqbn }} \
               --build-property 'compiler.cpp.extra_flags=-Wall -Wextra -Werror' \
               --build-property 'compiler.c.extra_flags=-Wall -Wextra -Werror' \
               "$ino"
@@ -69,7 +69,7 @@ jobs:
             ./examples/ESP8266_pcf8574_basic/ESP8266_pcf8574_basic.ino \
             ./examples/ESP8266_pcf8574_rotate/ESP8266_pcf8574_rotate.ino; do
             echo "Compiling $ino for ${{ matrix.fqbn }}"
-            arduino-cli compile --fqbn ${{ matrix.fqbn }} \
+            arduino-cli compile --library ./ --fqbn ${{ matrix.fqbn }} \
               --build-property 'compiler.cpp.extra_flags=-Wall -Wextra -Werror' \
               --build-property 'compiler.c.extra_flags=-Wall -Wextra -Werror' \
               "$ino"
