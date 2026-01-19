@@ -69,13 +69,29 @@ int8_t PCF8574::toggle(uint8_t mask) {
    return writePort(temp_out);
 }
 
+int8_t PCF8574::shiftLeft(uint8_t numberOfShifts) {
+   if (numberOfShifts > 7U) {
+      return PCF8574_ERROR_VALUE;
+   }
+   uint8_t temp_out = (_output << numberOfShifts);
+   return writePort(temp_out);
+}
+
 int8_t PCF8574::rotateLeft() {
-   uint8_t temp_out{(_output << 1U) | (_output >> 7U)};
+   uint8_t temp_out = (_output << 1U) | (_output >> 7U);
+   return writePort(temp_out);
+}
+
+int8_t PCF8574::shiftRight(uint8_t numberOfShifts) {
+   if (numberOfShifts > 7U) {
+      return PCF8574_ERROR_VALUE;
+   }
+   uint8_t temp_out = (_output >> numberOfShifts);
    return writePort(temp_out);
 }
 
 int8_t PCF8574::rotateRight() {
-   uint8_t temp_out{(_output >> 1U) | (_output << 7U)};
+   uint8_t temp_out = (_output >> 1U) | (_output << 7U);
    return writePort(temp_out);
 }
 
