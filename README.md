@@ -14,7 +14,7 @@ Arduino Library for PCF8574, a 8-port GPIO exander via i2c
 * [Helpful Links](#helpful-links)
 
 ## Library Documentation
-The library documentation is mainly placed in the following pdf document [refman.pdf](./docs/latex/refman.pdf) or located under the following github pages [github.io](https://hasenradball.github.io/PCF8574-I2C).<br>
+The library documentation is mainly placed in the following pdf document:<br>[PCF8574-I2C-Documentation.pdf](https://github.com/hasenradball/PCF8574-I2C/blob/gh-pages/PCF8574-I2C-Documentation.pdf)<br> or located under the following github pages [github.io](https://hasenradball.github.io/PCF8574-I2C).<br>
 Additionally in combination with the technical datasheet of microchip [PCF8574-Datasheet](./docs/PCF8574-Datasheet.pdf).
 
 
