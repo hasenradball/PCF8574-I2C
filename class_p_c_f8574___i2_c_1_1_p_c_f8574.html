@@ -105,9 +105,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab14ab7c10699ef32c071025ac62d58b4" id="r_ab14ab7c10699ef32c071025ac62d58b4"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#ab14ab7c10699ef32c071025ac62d58b4">toggle</a> (uint8_t mask)</td></tr>
 <tr class="memdesc:ab14ab7c10699ef32c071025ac62d58b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">toggle pins by give a mask which pin to toggle  <br /></td></tr>
 <tr class="separator:ab14ab7c10699ef32c071025ac62d58b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0226fa90971aa90b3d5e5271e834c5a9" id="r_a0226fa90971aa90b3d5e5271e834c5a9"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#a0226fa90971aa90b3d5e5271e834c5a9">shiftLeft</a> (uint8_t numberOfShifts=1U)</td></tr>
+<tr class="memdesc:a0226fa90971aa90b3d5e5271e834c5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">shift bits of port to the left  <br /></td></tr>
+<tr class="separator:a0226fa90971aa90b3d5e5271e834c5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69f54ac6ce9eca08cb28ab1169c6530" id="r_aa69f54ac6ce9eca08cb28ab1169c6530"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#aa69f54ac6ce9eca08cb28ab1169c6530">rotateLeft</a> ()</td></tr>
 <tr class="memdesc:aa69f54ac6ce9eca08cb28ab1169c6530"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate Port to the left  <br /></td></tr>
 <tr class="separator:aa69f54ac6ce9eca08cb28ab1169c6530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e0b0395f1d57e2f925109365e08b0b" id="r_ac3e0b0395f1d57e2f925109365e08b0b"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#ac3e0b0395f1d57e2f925109365e08b0b">shiftRight</a> (uint8_t numberOfShifts=1U)</td></tr>
+<tr class="memdesc:ac3e0b0395f1d57e2f925109365e08b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">shift bits of port to the right  <br /></td></tr>
+<tr class="separator:ac3e0b0395f1d57e2f925109365e08b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a1044e84c6f8e138fee165731921631" id="r_a4a1044e84c6f8e138fee165731921631"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_f8574___i2_c_1_1_p_c_f8574.html#a4a1044e84c6f8e138fee165731921631">rotateRight</a> ()</td></tr>
 <tr class="memdesc:a4a1044e84c6f8e138fee165731921631"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotate port to the right  <br /></td></tr>
 <tr class="separator:a4a1044e84c6f8e138fee165731921631"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,6 +379,76 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0226fa90971aa90b3d5e5271e834c5a9" name="a0226fa90971aa90b3d5e5271e834c5a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0226fa90971aa90b3d5e5271e834c5a9">&#9670;&#160;</a></span>shiftLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t PCF8574::shiftLeft </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>numberOfShifts</em> = <code>1U</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>shift bits of port to the left </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numberOfShifts</td><td>amount of shifts to the left (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int8_t status of the write command</dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>successfull </td></tr>
+    <tr><td class="paramname">-2</td><td>error on i2c connection </td></tr>
+    <tr><td class="paramname">-3</td><td>error in number of shifts parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac3e0b0395f1d57e2f925109365e08b0b" name="ac3e0b0395f1d57e2f925109365e08b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e0b0395f1d57e2f925109365e08b0b">&#9670;&#160;</a></span>shiftRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t PCF8574::shiftRight </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>numberOfShifts</em> = <code>1U</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>shift bits of port to the right </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numberOfShifts</td><td>amount of shifts to the right (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int8_t status of the write command</dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>successfull </td></tr>
+    <tr><td class="paramname">-2</td><td>error on i2c connection </td></tr>
+    <tr><td class="paramname">-3</td><td>error in number of shifts parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab14ab7c10699ef32c071025ac62d58b4" name="ab14ab7c10699ef32c071025ac62d58b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab14ab7c10699ef32c071025ac62d58b4">&#9670;&#160;</a></span>toggle()</h2>
 
@@ -414,7 +490,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 19 2026 06:54:57 for PCF8574-I2C by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Mon Jan 19 2026 09:05:40 for PCF8574-I2C by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
