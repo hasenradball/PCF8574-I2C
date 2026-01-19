@@ -21,7 +21,9 @@ setPort                   KEYWORD2
 
 toggle                    KEYWORD2
 
+shiftLeft                 KEYWORD2
 rotateLeft                KEYWORD2
+shiftRight                KEYWORD2
 rotateRight               KEYWORD2
 
 isDevicePresent           KEYWORD2
