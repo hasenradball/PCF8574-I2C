@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        fqbn: [arduino:avr:nano]
+        fqbn: [arduino:avr:nano, arduino:avr:uno]
     steps:
       - uses: actions/checkout@v4
 

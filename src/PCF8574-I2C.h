@@ -121,6 +121,18 @@ namespace PCF8574_I2C {
          int8_t toggle(uint8_t mask);
 
          /**
+          * @brief shift bits of port to the left
+          * 
+          * @param numberOfShifts amount of shifts to the left (optional)
+          * @return int8_t status of the write command
+          * 
+          * @retval  0: successfull
+          * @retval -2: error on i2c connection
+          * @retval -3: error in number of shifts parameter
+          */
+         int8_t shiftLeft(uint8_t numberOfShifts = 1U);
+
+         /**
           * @brief rotate Port to the left
           * 
           * @return int8_t status of the write command
@@ -129,6 +141,18 @@ namespace PCF8574_I2C {
           * @retval -2: error on i2c connection
           */
          int8_t rotateLeft();
+
+         /**
+          * @brief shift bits of port to the right
+          * 
+          * @param numberOfShifts amount of shifts to the right (optional)
+          * @return int8_t status of the write command
+          * 
+          * @retval  0: successfull
+          * @retval -2: error on i2c connection
+          * @retval -3: error in number of shifts parameter
+          */
+         int8_t shiftRight(uint8_t numberOfShifts = 1U);
 
          /**
           * @brief rotate port to the right
