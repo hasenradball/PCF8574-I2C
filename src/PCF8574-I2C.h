@@ -2,7 +2,7 @@
  * @file PCF8574-I2C.h
  * @author Frank Häfele (mail@frankhaefele.de)
  * @brief Library for a PCF8574 GPIO expander
- * @version 1.0.0
+ * @version 1.1.0
  * @date 2026-01-12
  * 
  * @copyright Copyright (c) 2026
@@ -17,7 +17,7 @@
 
 namespace PCF8574_I2C {
 
-    constexpr const char *PCF8574_LIB_VERSION   {"1.0.0"};
+    constexpr const char *PCF8574_LIB_VERSION   {"1.1.0"};
 
    /**
    * @brief constant which states all ok, no error

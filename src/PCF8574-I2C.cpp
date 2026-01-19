@@ -2,7 +2,7 @@
  * @file PCF8574-I2C.cpp
  * @author Frank Häfele (mail@frankhaefele.de)
  * @brief Library for a PCF8574 GPIO expander
- * @version 1.0.0
+ * @version 1.1.0
  * @date 2026-01-12
  * 
  * @copyright Copyright (c) 2026

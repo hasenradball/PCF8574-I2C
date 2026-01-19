@@ -5,45 +5,72 @@ on: [push, pull_request]
 jobs:
   build-arduino:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fqbn: [arduino:avr:nano]
     steps:
       - uses: actions/checkout@v4
-      - uses: arduino/compile-sketches@v1
+
+      - name: Setup arduino-cli
+        uses: arduino/setup-arduino-cli@v2
         with:
-          libraries: |
-            - source-path: ./
-          sketch-paths:
-            
+          version: "1.4.0"
+
+      - name: Install AVR core
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+
+      - name: Compile AVR examples with -Wall -Wextra -Werror
+        run: |
+          set -e
+          for ino in $(find ./examples -name 'Arduino*.ino'); do
+            echo "Compiling $ino for ${{ matrix.fqbn }}"
+            arduino-cli compile --library ./ --fqbn ${{ matrix.fqbn }} \
+              --build-property 'compiler.cpp.extra_flags=-Wall -Wextra -Werror' \
+              --build-property 'compiler.c.extra_flags=-Wall -Wextra -Werror' \
+              "$ino"
+          done
 
   build-esp8266:
     runs-on: ubuntu-latest
-    # if: contains(github.event.head_commit.message, '[esp8266]')
-
     strategy:
-      fail-fast: false
-      
       matrix:
-        board:
-          - fqbn: esp8266:esp8266:nodemcu
-          - fqbn: esp8266:esp8266:d1_mini
-        core:
-          - version: 3.1.2
-          - version: 3.0.2
-    
+        fqbn: [esp8266:esp8266:nodemcu, esp8266:esp8266:d1_mini]
+        core: [3.1.2]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Compile ESP8266 examples
-        uses: arduino/compile-sketches@v1
+      - name: Setup arduino-cli
+        uses: arduino/setup-arduino-cli@v2
         with:
-          platforms: |
-            - name: esp8266:esp8266
-              source-url: https://arduino.esp8266.com/stable/package_esp8266com_index.json
-              version: ${{ matrix.core.version }}
-          fqbn: ${{ matrix.board.fqbn }}
-          libraries: |
-            - source-path: ./
-          sketch-paths:
-            ./examples/ESP8266_pcf8574_basic/ESP8266_pcf8574_basic.ino
-            ./examples/ESP8266_pcf8574_rotate/ESP8266_pcf8574_rotate.ino
-            
+          version: "1.4.0"
+
+      - name: init arduino-cli
+        run: |
+          arduino-cli config init
+      
+      - name: Add ESP8266 boards manager
+        run: |
+          arduino-cli config add board_manager.additional_urls http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+      - name: Add ESP8266 package index
+        run: |
+          arduino-cli core update-index
+
+      - name: Install ESP8266 core
+        run: |
+          arduino-cli core install esp8266:esp8266@${{ matrix.core }}
+
+      - name: Compile ESP8266 examples with -Wall -Wextra -Werror
+        run: |
+          set -e
+          for ino in \
+            ./examples/ESP8266_pcf8574_basic/ESP8266_pcf8574_basic.ino \
+            ./examples/ESP8266_pcf8574_rotate/ESP8266_pcf8574_rotate.ino; do
+            echo "Compiling $ino for ${{ matrix.fqbn }}"
+            arduino-cli compile --library ./ --fqbn ${{ matrix.fqbn }} \
+              --build-property 'compiler.cpp.extra_flags=-Wall -Wextra -Werror' \
+              --build-property 'compiler.c.extra_flags=-Wall -Wextra -Werror' \
+              "$ino"
+          done
